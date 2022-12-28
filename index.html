@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>My Website</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      fetch('https://my.api.mockaroo.com/Samochody.json?key=eac1c0d0')
+      .then(res =>{
+       return res.json();
+      })
+      .then(data =>{
+        data.forEach(data =>{
+       
+          const markup =`<li>${data.Marka}</li>`;
+          console.log(markup)
+          console.count()
+          document.querySelector('ul').insertAdjacentHTML('beforeend', markup)
+        })
+      })
+      .catch(error => console.log(error))
+    </script>
+    <style>
+        #navbar {
+          background-color: lightgray;
+          padding: 10px;
+        }
+    
+        #navbar a {
+          display: inline-block;
+          margin-right: 20px;
+          text-decoration: none;
+          color: black;
+        }
+    
+        #navbar a:hover {
+          color: white;
+        }
+        #chart_div {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+      </style>
+  </head>
+  <body>
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div id="chart_div" style="width: 900px; height: 500px;"></div>
+      <div id="api-data"></div>
+      <ul></ul>
+  </body>
+</html>
