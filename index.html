@@ -2,39 +2,11 @@
   <head>
     <meta charset="UTF-8">
     <title>My Website</title> 
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="static/style.css">
-    
-    <style>
-        #navbar {
-          background-color: lightgray;
-          padding: 10px;
-        }
-    
-        #navbar a {
-          display: inline-block;
-          margin-right: 20px;
-          text-decoration: none;
-          color: black;
-        }
-    
-        #navbar a:hover {
-          color: white;
-        }
-        #chart_div {
-  width: 900px;
-  height: 500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-      </style>
-
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="navbar">
@@ -44,14 +16,14 @@
       </div>
       <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
       <script src="js/index.js"></script>
-      <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-      <script src="js/main.js"></script>
-      <div id="table"></div>
-      <ul></ul>
-      <script src="js/kolo.js"></script>
+      <canvas id="myChart" class="chart"></canvas>
+      
+      <script src="js/kolo.js" ></script>
       <canvas id="container" class="chart" width="800" height="450"></canvas>
+      
       <script src="js/chart2.js"></script>
       <canvas id="slupki" class="chart"></canvas>
+
       <script src="js/chart3.js" ></script>
       <canvas id="chart3" class="chart" width="800" height="450"></canvas>
   </body>
