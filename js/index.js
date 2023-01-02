@@ -1,4 +1,4 @@
-fetch('https://my.api.mockaroo.com/samochody.json?key=db140a20')
+fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
       .then(res =>{
        return res.json();
       })
@@ -45,17 +45,21 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=db140a20')
             labels: xValues,
             datasets: [{
               backgroundColor: barColors,
-              data: yValues
+              data: yValues,
+  
             }]
           },
           options: {
             legend: {display: false},
             title: {
               display: true,
-              text: "Ilość aut wyprodukowanych w danym roku "
+              text: "Ilość aut wyprodukowanych w danym roku",
+              fontSize: 40,
             },
             scales: {
-              xAxes: [{ticks: {min: 8, max:26}}],
+              xAxes: [{ticks: {min: 8, max:26,fontSize: 40}}],
+              yAxes: [{ticks: {min: 8, max:26,fontSize: 40}}],
+              
           }}
         });
       })

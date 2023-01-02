@@ -1,4 +1,4 @@
-fetch('https://my.api.mockaroo.com/samochody.json?key=db140a20')
+fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
       .then(res =>{
        return res.json();
       })
