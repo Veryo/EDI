@@ -13,6 +13,18 @@
 table,td,th{
   border-spacing: 15px;
 }
-#container { 
-    width: 100%; height: 100%; margin: 0; padding: 0; 
-  } 
+.chart{
+    width:100%;
+    max-width:1000px;
+    margin: auto;
+}
+.anychart-credits {
+  display: none;
+}
+#chart3{
+  height:450px;
+}
+
+#container{
+  height:450px;
+}
