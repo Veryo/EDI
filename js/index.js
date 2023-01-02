@@ -1,44 +1,46 @@
-
-
-fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
+fetch('https://my.api.mockaroo.com/samochody.json?key=db140a20')
       .then(res =>{
        return res.json();
       })
       .then(data =>{
-        let cena1 = []
-        let cena2 = []
-        let cena3 = []
-        let cena4 = []
-        let cena5 = []
+        let data1 = 0
+        let data2 = 0
+        let data3 = 0
+        let data4 = 0
+        let data5 = 0
+        let data6 = 0
         data.forEach(data =>{
         
           const rok = data.Rok_produkcji;
-          const cena = data.Cena
           
-          if (rok == 2001){
-          
-            cena1.push(cena);
+          if (rok == 2000){
+            data1+=1
+
+          }else if (rok == 2001){
+            data2+=1
+
           }else if (rok == 2002){
-         
-            cena2.push(cena);
+            data3+=1
+
           }else if (rok == 2003){
-          
-            cena3.push(cena);
+            data4+=1
+
           }else if (rok == 2004){
-            
-            cena4.push(cena);
+            data5+=1
+
           }else if (rok == 2005){
-            cena5.push(cena);
+            data6+=1
+
           }
          
         })
     
-        var xValues = ["2011", "2012", "2013", "2014", "2015"];
-        var yValues = [cena1.length, cena2.length, cena3.length, cena4.length, cena5.length];
-        var barColors = ["red", "green","blue","orange","brown"];
+        var xValues = ["2000", "2001", "2002", "2003", "2004", "2005"];
+        var yValues = [data1,data2,data3,data4,data5,data6];
+        var barColors = ["red", "green","blue","orange","brown","purple"];
         
         new Chart("myChart", {
-          type: "bar",
+          type: "horizontalBar",
           data: {
             labels: xValues,
             datasets: [{
@@ -50,10 +52,11 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
             legend: {display: false},
             title: {
               display: true,
-              text: "World Wine Production 2018"
-            }
-          }
+              text: "Ilość aut wyprodukowanych w danym roku "
+            },
+            scales: {
+              xAxes: [{ticks: {min: 8, max:26}}],
+          }}
         });
       })
       .catch(error => console.log(error))
-    
