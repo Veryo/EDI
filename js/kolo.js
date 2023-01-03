@@ -6,8 +6,7 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
         let gaz=0
         let benzyna= 0
         let diesel=0
-
-
+        
         data.forEach(data =>{
         
           const silnik = data.Silnik;
@@ -20,10 +19,8 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
 
           }else if (silnik == "diesel"){
             diesel+=1
-          }
-    
-        })
-    
+          }   
+        })   
         var xValues = ["gaz","benzyna","diesel"];
         var yValues = [gaz,benzyna,diesel];
         var barColors = ["blue", "green","black"];
@@ -35,8 +32,7 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
               datasets: [
                 {
                  backgroundColor: barColors,
-                  data: yValues,
-                 
+                  data: yValues,      
                 }
               ]
             },
