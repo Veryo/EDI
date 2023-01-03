@@ -50,8 +50,15 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
             legend: {display: false},
             title: {
               display: true,
-              text: "Średnie spalanie na rodzaj silnika "
-            }
+              text: "Średnie spalanie na rodzaj silnika ",
+              fontSize: 40,
+              fontColor: 'black'
+            },
+            scales: {
+              xAxes: [{ticks: {min: 6, max:14,fontSize: 40,fontColor: 'black'}}],
+              yAxes: [{ticks: {min: 6, max:14,fontSize: 40,fontColor: 'black'}}],
+              
+          }
           }
         });
       })

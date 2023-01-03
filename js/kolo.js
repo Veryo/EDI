@@ -35,14 +35,20 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
               datasets: [
                 {
                  backgroundColor: barColors,
-                  data: yValues
+                  data: yValues,
+                 
                 }
               ]
             },
             options: {
               title: {
                 display: true,
-                text: 'Silniki w Samochodach'
+                text: 'Silniki w Samochodach',
+                fontSize: 40,
+                fontColor: 'black'
+              },
+              labels: {
+                  fontSize: 40
               }
             }
         });

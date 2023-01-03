@@ -13,4 +13,3 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
         })
       })
       .catch(error => console.log(error))
-  

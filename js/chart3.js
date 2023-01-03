@@ -47,15 +47,19 @@ fetch('https://my.api.mockaroo.com/samochody.json?key=a98778a0')
             datasets: [
               {
                 backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                data: yValues
+                data: yValues,
+                
               }
             ]
           },
           options: {
             title: {
               display: true,
-              text: "Ilość samochodów z danej marki"
+              text: "Ilość samochodów z danej marki",
+              fontSize: 40,
+              fontColor: 'black'
             }
+           
           }
       })
     })
