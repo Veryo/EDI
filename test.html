@@ -9,10 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="static/style.css">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="js/charts.js"></script>
 </head>
 <body>
 
@@ -26,6 +24,7 @@
     <a href="#ch3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Średnie spalanie na rodzaj silnika</a>
     <a href="#ch4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ilość samochodów z danej marki</a>
   </div>
+ </div>
 
  
 
@@ -56,18 +55,14 @@
     </form>
   
 </header>
-</div>
+
 
 <!-- First Grid -->
 <div id="ch1">
 <div class="w3-row-padding w3-padding-64 w3-container " style ="background-image: url('slupkowy.jpg')";>
   <div class="w2-content">
     <div class="w2-twothird">
-        <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
-      <script src="js/index.js"></script>
-      
-     
-      <canvas id="myChart" class="chart" width="800" height="450"></canvas>
+      <canvas id="chart1" class="chart" width="800" height="450"></canvas>
     </div> 
     </div>
   </div>
@@ -79,8 +74,7 @@
 <div class="w3-row-padding w3-padding-64 w3-container"  style ="background-image: url('kolowy.jpg')";>
     <div class="w1-content">
       <div class="w2-twothird">
-        <script src="js/kolo.js" ></script>
-        <canvas id="container" class="chart" width="800" height="600"></canvas>
+        <canvas id="chart2" class="chart" width="800" height="450"></canvas>
       </div>
     </div>
   </div>
@@ -90,9 +84,7 @@
   <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('slupkowy2.jpg')">
     <div class="w1-content">
       <div class="w2-twothird">
-        <script src="js/chart2.js"></script>
-        <canvas id="slupki" class="chart"></canvas>
-        
+        <canvas id="chart3" class="chart"></canvas>
       </div>
     </div>
   </div>
@@ -102,8 +94,7 @@
   <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('kolowy2.jpg')">
     <div class="w1-content">
       <div class="w2-twothird">
-        <script src="js/chart3.js" ></script>
-        <canvas id="chart3" class="chart" width="800" height="600"></canvas>
+        <canvas id="chart4" class="chart" width="800" height="450"></canvas>
       </div>
     </div>
   </div>
