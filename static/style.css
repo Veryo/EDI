@@ -4,19 +4,22 @@
     overflow: hidden;
     overflow-y: scroll;
     height: 500px;
-    width: 800px;
+    width: 625px;
     font-family: 'Alata', sans-serif;
-    background:rgb(206, 217, 219);
+    background:lightgray;
     padding: 20px 20px;
-    color: rgb(6, 79, 93);
+    
 }
 .table thead th {
-    background: #009578;
+    background: black;
     color: #ffffff;
 }
-
+table td{
+  color:black ;
+}
 .table tbody tr:last-of-type {
-    border-bottom: 2px solid #009578;
+    border-bottom: 2px solid black;
+   
 }
 
 .chart{
