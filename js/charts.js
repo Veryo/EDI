@@ -1,5 +1,43 @@
+// This function adds an HTML table to the page with data from the `data` argument.
+function addTable(data) {
+  // Get the list of column names from the data.
+  var col = [];
+  for (var i = 0; i < data.length; i++) {
+    for (var key in data[i]) {
+      if (col.indexOf(key) === -1) {
+        col.push(key);
+      }
+    }
+  }
 
-function chart1(data){
+  // Create the table element.
+  var table = document.createElement("table");
+
+  // Add a row for the column names.
+  var tr = table.insertRow(-1);
+  for (var i = 0; i < col.length; i++) {
+    var th = document.createElement("th");
+    th.innerHTML = col[i];
+    tr.appendChild(th);
+  }
+
+  // Add a row for each item in the data.
+  for (var i = 0; i < data.length; i++) {
+    tr = table.insertRow(-1);
+    for (var j = 0; j < col.length; j++) {
+      var tabCell = tr.insertCell(-1);
+      tabCell.innerHTML = data[i][col[j]];
+    }
+  }
+
+  // Add the table to the page.
+  var divContainer = document.getElementById("table");
+  divContainer.innerHTML = "";
+  divContainer.appendChild(table);
+}
+
+
+function iloscAut(data){
     let data1 = 0
     let data2 = 0
     let data3 = 0
@@ -78,7 +116,7 @@ function chart1(data){
   
 
 
-function chart2(data){
+function iloscMarka(data){
         let nissan= 0
         let ferrari= 0
         let toyota= 0
@@ -143,7 +181,7 @@ function chart2(data){
 }
 
 
-function chart3(data){
+function srednieSpalanie(data){
         let silnik1 = []
         let gaz=0
         let silnik2 = []
@@ -204,7 +242,7 @@ function chart3(data){
         })
     }
 
-function chart4(data){
+function rodzajeSilnikow(data){
         let gaz=0
         let benzyna= 0
         let diesel=0
@@ -254,27 +292,16 @@ function chart4(data){
     }
 
 
-function tabelka(data){
-    var col=[]
-    for(i in data){
-      for(var key in data[i]){
-        if( col.indexOf(key) ===-1){
-          
-        }
-      }
-    }
-}
-
-
 async function get_data() {
     const response = await fetch("https://my.api.mockaroo.com/samochody.json?key=a98778a0");
     const data = await response.json();
     
    
-    chart1(data);
-    chart2(data);
-    chart3(data);
-    chart4(data);
+    iloscAut(data);
+    iloscMarka(data);
+    srednieSpalanie(data);
+    rodzajeSilnikow(data);
+    addTable(data)
   }
 
 get_data()

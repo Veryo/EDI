@@ -8,11 +8,12 @@
     font-family: 'Alata', sans-serif;
     background:lightgray;
     padding: 20px 20px;
+    color: black;
     
 }
-.table thead th {
+.table th {
     background: black;
-    color: #ffffff;
+    color: black;
 }
 table td{
   color:black ;
@@ -30,14 +31,8 @@ table td{
 .anychart-credits {
   display: none;
 }
-#chart3{
-  height:450px;
-}
 
-#container{
-  height:450px;
-}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;color: black ;}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 

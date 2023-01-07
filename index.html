@@ -1,32 +1,124 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Website</title> 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="static/style.css">
-  </head>
-  <body>
-    <div id="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-      <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
-      <script src="js/index.js"></script>
-      <canvas id="myChart" class="chart"></canvas>
-      
-      <script src="js/kolo.js" ></script>
-      <canvas id="container" class="chart" width="800" height="450"></canvas>
-      
-      <script src="js/chart2.js"></script>
-      <canvas id="slupki" class="chart"></canvas>
+<head>
+<title>Wykresy z samochodami</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="js/charts.js"></script>
 
-      <script src="js/chart3.js" ></script>
-      <canvas id="chart3" class="chart" width="800" height="450"></canvas>
-      
-     
-  </body>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Strona Główna</a>
+    <a href="#ch1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ilość aut wyprodukowanych w danym roku</a>
+    <a href="#ch2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ilość samochodów z danej marki</a>
+    <a href="#ch3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Średnie spalanie na rodzaj silnika</a>
+    <a href="#ch4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"> Silniki w Samochodach</a>
+  </div>
+ </div>
+
+
+<!-- Header -->
+
+<header class="w3-container w3-red w3-center" style="padding:128px 16px;background-image: url('static/starting.jpg')" >
+
+  <h1 class="w3-margin w3-jumbo">Wykresy z danymi samochodów</h1>
+
+    <form action="https://github.com/Veryo">
+      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Jakub Wójcik
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
+      </button>
+      </form>
+
+    <form action="https://github.com/JakubZajas">
+      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Jakub Zajas
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
+      </button>
+    </form>
+
+    <form action="https://github.com/xmix2137">
+        <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Krzysztof Sikora
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
+        </button>
+    </form>
+
+    <form action="https://github.com/Veryo/EDI">
+      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Projekt
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
+      </button>
+    </form>
+
+    <!-- Tabelka -->
+  <div class="w3-row-padding w3-padding-64 w3-container ">
+    <div id="table">
+      <table class="table">
+          <thead></thead>
+          <tbody></tbody>
+      </table>
+      <script src="js/tabelka.js"></script>
+   </div>
+  </div>
+
+</header>
+
+
+<!-- Chart 1 -->
+<div id="ch1">
+<div class="w3-row-padding w3-padding-64 w3-container " style ="background-image: url('static/slupkowy.jpg')";>
+  <div class="w2-content">
+    <div class="w2-twothird">
+      <canvas id="chart1" class="chart" width="800" height="450"></canvas>
+    </div> 
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Chart 2 -->
+<div id="ch2">
+<div class="w3-row-padding w3-padding-64 w3-container"  style ="background-image: url('static/kolowy.jpg')";>
+    <div class="w1-content">
+      <div class="w2-twothird">
+        <canvas id="chart2" class="chart" width="800" height="450"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chart 3 -->
+<div id="ch3">
+  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('static/slupkowy2.jpg')">
+    <div class="w1-content">
+      <div class="w2-twothird">
+        <canvas id="chart3" class="chart" width="800" height="450"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chart 4 -->
+<div id="ch4">
+  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('static/kolowy2.jpg')">
+    <div class="w1-content">
+      <div class="w2-twothird">
+        <canvas id="chart4" class="chart" width="800" height="450"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64"></div>
+
+</body>
+
 </html>
