@@ -10,9 +10,15 @@
     padding: 20px 20px;
     color: rgb(6, 79, 93);
 }
-table,td,th{
-  border-spacing: 15px;
+.table thead th {
+    background: #009578;
+    color: #ffffff;
 }
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009578;
+}
+
 .chart{
     width:100%;
     max-width:1000px;
