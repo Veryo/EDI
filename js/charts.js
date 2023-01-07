@@ -122,7 +122,7 @@ function chart2(data){
             labels: xValues,
             datasets: [
               {
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#fa9734"],
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
                 data: yValues,
                 
               }
