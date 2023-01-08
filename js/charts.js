@@ -1,5 +1,5 @@
 // This function adds an HTML table to the page with data from the `data` argument.
-function addTable(data) {
+function table(data) {
   // Get the list of column names from the data.
   var col = [];
   for (var i = 0; i < data.length; i++) {
@@ -37,41 +37,41 @@ function addTable(data) {
 }
 
 
-function iloscAut(data){
-    let data1 = 0
-    let data2 = 0
-    let data3 = 0
-    let data4 = 0
-    let data5 = 0
-    let data6 = 0
+function yearCarCounter(data){
+    let year1 = 0
+    let year2 = 0
+    let year3 = 0
+    let year4 = 0
+    let year5 = 0
+    let year6 = 0
     data.forEach(data =>{
     
-      const rok = data.Rok_produkcji;
+      const year = data.Rok_produkcji;
       
-      if (rok == 2000){
-        data1+=1
+      if (year == 2000){
+        year1+=1
 
-      }else if (rok == 2001){
-        data2+=1
+      }else if (year == 2001){
+        year2+=1
 
-      }else if (rok == 2002){
-        data3+=1
+      }else if (year == 2002){
+        year3+=1
 
-      }else if (rok == 2003){
-        data4+=1
+      }else if (year == 2003){
+       year4+=1
 
-      }else if (rok == 2004){
-        data5+=1
+      }else if (year == 2004){
+        year5+=1
 
-      }else if (rok == 2005){
-        data6+=1
+      }else if (year == 2005){
+        year6+=1
 
       }
      
     })
 
     var xValues = ["2000", "2001", "2002", "2003", "2004", "2005"];
-    var yValues = [data1,data2,data3,data4,data5,data6];
+    var yValues = [year1,year2,year3,year4,year5,year6];
     var barColors = ["red", "green","blue","orange","brown","purple"];
     
     new Chart("chart1", {
@@ -116,7 +116,7 @@ function iloscAut(data){
   
 
 
-function iloscMarka(data){
+function brandCounter(data){
         let nissan= 0
         let ferrari= 0
         let toyota= 0
@@ -128,24 +128,24 @@ function iloscMarka(data){
 
         data.forEach(data =>{
         
-          const marka = data.Marka;
+          const brand = data.Marka;
           
-          if (marka == "nissan"){
+          if (brand == "nissan"){
                   nissan+=1
 
-          }else if (marka == "ferrari"){
+          }else if (brand == "ferrari"){
                   ferrari+=1
 
-          }else if (marka == "toyota"){
+          }else if (brand == "toyota"){
                   toyota+=1
             
-          }else if (marka == "bmw"){
+          }else if (brand == "bmw"){
                   bmw+=1
           
-        }else if (marka == "audi"){
+        }else if (brand == "audi"){
                   audi+=1
           
-        }else if (marka == "mercedes"){
+        }else if (brand == "mercedes"){
                   mercedes+=1
           }
         })
@@ -181,7 +181,7 @@ function iloscMarka(data){
 }
 
 
-function avgconsumption(data){
+function avgConsumption(data){
         let engine1 = []
         let gaz=0
         let engine2 = []
@@ -229,7 +229,7 @@ function avgconsumption(data){
             legend: {display: false},
             title: {
               display: true,
-              text: "Średnie spalanie na rodzaj silnika",
+              text: "Średnie spalanie a rodzaj silnika",
               fontSize: 40,
               fontColor: 'black'
             },
@@ -242,7 +242,7 @@ function avgconsumption(data){
         })
     }
 
-function enginetypes(data){
+function engineTypes(data){
         let gaz=0
         let benzyna= 0
         let diesel=0
@@ -297,11 +297,11 @@ async function get_data() {
     const data = await response.json();
     
    
-    iloscAut(data);
-    iloscMarka(data);
-    avgconsumption(data);
-    enginetypes(data);
-    addTable(data)
+    yearCarCounter(data);
+    brandCounter(data);
+    avgConsumption(data);
+    engineTypes(data);
+    table(data);
   }
 
 get_data()
