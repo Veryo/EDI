@@ -183,9 +183,9 @@ function brandCounter(data){
 
 function avgConsumption(data){
         let engine1 = []
-        let gaz=0
+        let gas=0
         let engine2 = []
-        let benzyna= 0
+        let petrol= 0
         let engine3 = []
         let diesel=0
 
@@ -197,23 +197,23 @@ function avgConsumption(data){
           
           if (engine == "gaz"){
             engine1.push(consumption);
-            gaz+=consumption
+            gas+=consumption
 
           }else if (engine == "benzyna"){
             engine2.push(consumption);
-            benzyna+=consumption
+            petrol+=consumption
 
           }else if (engine == "diesel"){
             engine3.push(consumption);
             diesel+=consumption
           }
-        avg_gaz=gaz/engine1.length;
-        avg_benzyna=benzyna/engine2.length;
+        avg_gas=gas/engine1.length;
+        avg_petrol=petrol/engine2.length;
         avg_diesel=diesel/engine3.length
         })
     
         var xValues = ["gaz","benzyna","diesel"];
-        var yValues = [avg_gaz,avg_benzyna,avg_diesel];
+        var yValues = [avg_gas,avg_petrol,avg_diesel];
         var barColors = ["red", "green","blue"];
         
         new Chart("chart3", {
@@ -243,8 +243,8 @@ function avgConsumption(data){
     }
 
 function engineTypes(data){
-        let gaz=0
-        let benzyna= 0
+        let gas=0
+        let petrol= 0
         let diesel=0
         
         data.forEach(data =>{
@@ -252,17 +252,17 @@ function engineTypes(data){
           const engine = data.Silnik;
           
           if (engine == "gaz"){
-            gaz+=1
+            gas+=1
 
           }else if (engine == "benzyna"){
-            benzyna+=1
+            petrol+=1
 
           }else if (engine == "diesel"){
             diesel+=1
           }   
         })   
         var xValues = ["gaz","benzyna","diesel"];
-        var yValues = [gaz,benzyna,diesel];
+        var yValues = [gas,petrol,diesel];
         var barColors = ["blue", "green","black"];
         
         new Chart("chart4", {
