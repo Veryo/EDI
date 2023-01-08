@@ -293,7 +293,7 @@ function engineTypes(data){
 
 
 async function get_data() {
-    const response = await fetch("https://my.api.mockaroo.com/samochody.json?key=a98778a0");
+    const response = await fetch("https://my.api.mockaroo.com/Samochody.json?key=eac1c0d0");
     const data = await response.json();
     
    
