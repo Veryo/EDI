@@ -181,35 +181,35 @@ function iloscMarka(data){
 }
 
 
-function srednieSpalanie(data){
-        let silnik1 = []
+function avgconsumption(data){
+        let engine1 = []
         let gaz=0
-        let silnik2 = []
+        let engine2 = []
         let benzyna= 0
-        let silnik3 = []
+        let engine3 = []
         let diesel=0
 
 
         data.forEach(data =>{
         
-          const silnik = data.Silnik;
-          const spalanie = data.Srednie_spalanie
+          const engine = data.Silnik;
+          const consumption = data.Srednie_spalanie
           
-          if (silnik == "gaz"){
-            silnik1.push(spalanie);
-            gaz+=spalanie
+          if (engine == "gaz"){
+            engine1.push(consumption);
+            gaz+=consumption
 
-          }else if (silnik == "benzyna"){
-            silnik2.push(spalanie);
-            benzyna+=spalanie
+          }else if (engine == "benzyna"){
+            engine2.push(consumption);
+            benzyna+=consumption
 
-          }else if (silnik == "diesel"){
-            silnik3.push(spalanie);
-            diesel+=spalanie
+          }else if (engine == "diesel"){
+            engine3.push(consumption);
+            diesel+=consumption
           }
-        avg_gaz=gaz/silnik1.length;
-        avg_benzyna=benzyna/silnik2.length;
-        avg_diesel=diesel/silnik3.length
+        avg_gaz=gaz/engine1.length;
+        avg_benzyna=benzyna/engine2.length;
+        avg_diesel=diesel/engine3.length
         })
     
         var xValues = ["gaz","benzyna","diesel"];
@@ -242,22 +242,22 @@ function srednieSpalanie(data){
         })
     }
 
-function rodzajeSilnikow(data){
+function enginetypes(data){
         let gaz=0
         let benzyna= 0
         let diesel=0
         
         data.forEach(data =>{
         
-          const silnik = data.Silnik;
+          const engine = data.Silnik;
           
-          if (silnik == "gaz"){
+          if (engine == "gaz"){
             gaz+=1
 
-          }else if (silnik == "benzyna"){
+          }else if (engine == "benzyna"){
             benzyna+=1
 
-          }else if (silnik == "diesel"){
+          }else if (engine == "diesel"){
             diesel+=1
           }   
         })   
@@ -299,8 +299,8 @@ async function get_data() {
    
     iloscAut(data);
     iloscMarka(data);
-    srednieSpalanie(data);
-    rodzajeSilnikow(data);
+    avgconsumption(data);
+    enginetypes(data);
     addTable(data)
   }
 
