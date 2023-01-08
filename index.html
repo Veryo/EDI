@@ -18,7 +18,6 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Strona Główna</a>
     <a href="#ch1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ilość aut wyprodukowanych w danym roku</a>
     <a href="#ch2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ilość samochodów z danej marki</a>
@@ -30,7 +29,7 @@
 
 <!-- Header -->
 
-<header class="w3-container w3-red w3-center" style="padding:128px 16px;background-image: url('static/starting.jpg')" >
+<header class="w3-container w3-red w3-center" style="padding:128px 16px;background-image: url('media/starting.jpg')" >
 
   <h1 class="w3-margin w3-jumbo">Wykresy z danymi samochodów</h1>
 
@@ -61,11 +60,7 @@
     <!-- Data table -->
   <div class="w3-row-padding w3-padding-64 w3-container ">
     <div id="table">
-      <table class="table">
-          <thead></thead>
-          <tbody></tbody>
-      </table>
-      <script src="js/tabelka.js"></script>
+      <table class="table"></table>
    </div>
   </div>
 
@@ -74,7 +69,7 @@
 
 <!-- Chart 1 -->
 <div id="ch1">
-<div class="w3-row-padding w3-padding-64 w3-container " style ="background-image: url('static/slupkowy.jpg')";>
+<div class="w3-row-padding w3-padding-64 w3-container " style ="background-image: url('media/slupkowy.jpg')";>
   <div class="w2-content">
     <div class="w2-twothird">
       <canvas id="chart1" class="chart" width="800" height="450"></canvas>
@@ -86,7 +81,7 @@
 
 <!-- Chart 2 -->
 <div id="ch2">
-<div class="w3-row-padding w3-padding-64 w3-container"  style ="background-image: url('static/kolowy.jpg')";>
+<div class="w3-row-padding w3-padding-64 w3-container"  style ="background-image: url('media/kolowy.jpg')";>
     <div class="w1-content">
       <div class="w2-twothird">
         <canvas id="chart2" class="chart" width="800" height="450"></canvas>
@@ -97,7 +92,7 @@
 
 <!-- Chart 3 -->
 <div id="ch3">
-  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('static/slupkowy2.jpg')">
+  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('media/slupkowy2.jpg')">
     <div class="w1-content">
       <div class="w2-twothird">
         <canvas id="chart3" class="chart" width="800" height="450"></canvas>
@@ -108,7 +103,7 @@
 
 <!-- Chart 4 -->
 <div id="ch4">
-  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('static/kolowy2.jpg')">
+  <div class="w3-row-padding w3-padding-64 w3-container" style ="background-image: url('media/kolowy2.jpg')">
     <div class="w1-content">
       <div class="w2-twothird">
         <canvas id="chart4" class="chart" width="800" height="450"></canvas>
