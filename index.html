@@ -57,27 +57,11 @@
       </button>
     </form>
 
-    <form >
-      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="dataApi()">Projekt
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
-      </button>
-    </form>
-    <form onclick="dataFileOne()">
-      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Projekt
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
-      </button>
-    </form>
-    <form onclick="dataFileTwo()">
-      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Projekt
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
-      </button>
-    </form>
-    <form onclick="dataFileThree()">
-      <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Projekt
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub icon" style="height: 20px;">
-      </button>
-    </form>
-
+    <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=" getData('https://my.api.mockaroo.com/Samochody.json?key=eac1c0d0')">Mockaro</button>
+    <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=" getData('js/Samochod1.json')">Data1</button>
+    <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=" getData('js/Samochod2.json')">Data2</button>
+    <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=" getData('js/Samochod3.json')">Data3</button>
+    <button  class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=" location.reload()">Refresh</button>
     <!-- Data table -->
   <div class="w3-row-padding w3-padding-64 w3-container ">
     <div id="table">
