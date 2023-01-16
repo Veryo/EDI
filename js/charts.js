@@ -292,7 +292,7 @@ function engineTypes(data){
     }
 
 
-async function get_data() {
+async function dataApi() {
     const response = await fetch("https://my.api.mockaroo.com/Samochody.json?key=eac1c0d0");
     const data = await response.json();
     
@@ -303,5 +303,36 @@ async function get_data() {
     engineTypes(data);
     table(data);
   }
-
-get_data()
+async function dataFileOne() {
+    const response = await fetch("Samochody1.json");
+    const data = await response.json();
+    console.log(data)
+   
+    yearCarCounter(data);
+    brandCounter(data);
+    avgConsumption(data);
+    engineTypes(data);
+    table(data);
+  }
+async function dataFileTwo() {
+    const response = await fetch("Samochody2.json");
+    const data = await response.json();
+    
+   
+    yearCarCounter(data);
+    brandCounter(data);
+    avgConsumption(data);
+    engineTypes(data);
+    table(data);
+  }
+async function dataFileThree() {
+    const response = await fetch("Samochody3.json");
+    const data = await response.json();
+    
+   
+    yearCarCounter(data);
+    brandCounter(data);
+    avgConsumption(data);
+    engineTypes(data);
+    table(data);
+  }
